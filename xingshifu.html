@@ -14,6 +14,7 @@
 				min-width:640px;
 				font-family:楷体;
 				background-color:#faebd7;
+				overflow-x:hidden;
 			}
 			
 			#mainDiv {
@@ -26,14 +27,20 @@
 				#img{
 					position:absolute;
 					width:500px;
+					border-radius: 30px;
 				}
 		#title{
 			width:150%;
 			position:relative;
 			left:-110px;
 			margin-bottom:50px;
+			animation: mymove 3s;
 		}
-			
+		
+		@keyframes mymove {
+		  from {left:300px;}
+		  to {right: 0px;}
+		}	
 		</style>	
 	<body>
 		<div id="mainDiv">
