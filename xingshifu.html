@@ -28,6 +28,9 @@
 					position:absolute;
 					width:500px;
 					border-radius: 30px;
+					cursor: pointer;
+					transition: transform 0.3s ease-in-out;
+					transform-origin: top left;
 				}
 		#title{
 			width:150%;
@@ -37,15 +40,57 @@
 			animation: mymove 3s;
 		}
 		
+		#center{
+			margin-bottom: 50px;
+		}
+		
 		@keyframes mymove {
 		  from {left:300px;}
 		  to {right: 0px;}
 		}	
 		</style>	
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<script>
+		        $(document).ready(function(){
+		           
+		            var imageElement = $("#yourImage");
+		
+		            var isZoomed = false;
+
+		            imageElement.click(function(event) {
+		               
+		                var offsetX = event.pageX - imageElement.offset().left;
+		                var offsetY = event.pageY - imageElement.offset().top;
+		
+		                if (!isZoomed) {
+		                   
+		                    imageElement.css({
+		                        "transform": "scale(10)",
+		                        "transform-origin": offsetX + "px " + offsetY + "px"
+		                    });
+		
+		                    setTimeout(function() {
+		                        imageElement.css("transform", "scale(1)");
+		                       
+		                        isZoomed = !isZoomed;
+		                    }, 10000);
+		                } else {
+		                   
+		                    imageElement.css("transform", "scale(1)");
+		                }
+
+		                isZoomed = !isZoomed;
+		            });
+		        });
+		    </script>
+
+		
 	<body>
 		<div id="mainDiv">
 			<img src="image\xingshi·fu.png" id="title" />	
-			<img src="image\img1.png" id="image" />
+			<img src="image\img1.png" id="center"/>
+			<img src="image/tiger.png"  id="yourImage"/>
+			<p>点击图片可放大细看醒狮图案</p>
 		</div>
 	</body>
 </html>
