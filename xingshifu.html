@@ -40,10 +40,6 @@
 			animation: mymove 3s;
 		}
 		
-		#center{
-			margin-bottom: 50px;
-		}
-		
 		@keyframes mymove {
 		  from {left:300px;}
 		  to {right: 0px;}
@@ -53,7 +49,7 @@
 		<script>
 		        $(document).ready(function(){
 		           
-		            var imageElement = $("#yourImage");
+		            var imageElement = $("#Image");
 		
 		            var isZoomed = false;
 
@@ -88,8 +84,7 @@
 	<body>
 		<div id="mainDiv">
 			<img src="image\xingshi·fu.png" id="title" />	
-			<img src="image\img1.png" id="center"/>
-			<img src="image/tiger.png"  id="yourImage"/>
+			<img src="image\img1.png" id="Image"/>
 			<p>点击图片可放大细看醒狮图案</p>
 		</div>
 	</body>
