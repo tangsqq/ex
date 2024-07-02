@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐代诗歌的时空感和人生哲理</title>
+    <style type="text/css">
+    	
+        body, html {
+            height: 100%;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            background: url(img/hometu/beijing2.jpg) no-repeat;
+			background-size: 100% 100%;
+			background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .image-button {
+        	position: fixed; /* 或者使用 position: absolute; 如果你不想它随着页面滚动 */
+        	right: 5%; /* 控制图片距离页面右边的距离 */
+        	bottom: 5%; /* 控制图片距离页面底部的距离 */
+        	z-index: 2; /* 确保图片按钮在其他元素之上 */
+        }
+        
+        .image-button img {
+        	width: 80px; /* 设置图片的宽度，你可以根据需要调整 */
+        	height: auto; /* 保持图片的原始纵横比 */
+        }
+        
+        #mainDiv {
+		width: 1200px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* 水平居中 */
+		align-items: center; /* 垂直居中（如果只有一行元素）*/
+		max-width: 100%; /* 根据容器宽度调整 */
+		}
+		
+        #zuozhejieshaozi, .a {
+			/* 假设图片是响应式的，即设置了 max-width: 100% */
+			margin: 50px; /* 根据需要调整间距 */
+			text-align: center; /* 如果需要文本居中 */
+			flex: 0 0 auto; /* 不增长，不缩小，保持原始大小或内容大小 */
+		}
+		
+        /* 如果需要的话，你可以添加其他样式，如边框、阴影等 */
+        #zuozhejieshaozi{	
+			position: absolute;
+			width: 8%;
+
+		}
+		
+        .a {
+            width: 600px;
+            margin: 0 auto;
+            height: 600px;
+            position: relative;
+            top: 150px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .b {
+            transition: .7s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .b:hover {
+            flex-shrink: 0;
+            flex-grow: 0;
+			transform: scale(1.15); /* 悬停时放大图片 */  
+        }
+
+        .text-overlay {
+			width: 350px;
+            position: relative;
+			bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .b:hover .text-overlay {
+            opacity: 1;
+        }
+
+        img {
+            width: 450px;
+            cursor: pointer;
+			border-radius: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+	<div class="image-button">  
+        <a href="kaipian.html">  
+            <img src="img/daohang/fanhui.png">  
+        </a>  
+    </div>  
+    <div id="mainDiv">  
+        <div>
+		<img src="img/homezi/zuozhejieshaozi.png" id="zuozhejieshaozi" />		
+	</div>
+	    <div class="a">
+		    <div class="b">
+			    <img src="img/shiren/LIBAI.jpg">
+			    <div class="text-overlay">李白，唐朝浪漫主义诗人，字太白，号青莲居士。祖籍陇西成纪，生于蜀郡绵州，为凉武昭王李暠九世孙。其诗作奔放，想象丰富，被誉为“诗仙”，与杜甫并称“李杜”。</div>
+		    </div>
+		    <div class="b">
+		    	<img src="img/shiren/DUFU.jpg">
+		    	<div class="text-overlay">杜甫，唐朝现实主义诗人，字子美，自号少陵野老。祖籍襄阳，迁居巩县。诗作深沉，反映社会现实，与李白合称“大李杜”，世称“老杜”。</div>
+		    </div>
+		    <div class="b">
+		    	<img src="img/shiren/CENSHEN.jpg">
+		    	<div class="text-overlay">岑参，唐代诗人，与高适并称“高岑”。进士及第后，曾两次从军边塞，对边塞风光和军旅生活有深切感受，边塞诗尤为出色，曾任嘉州刺史，世称“岑嘉州”。</div>
+		    </div>
+		    <div class="b">
+		    	<img src="img/shiren/LIYI.jpg">
+		    	<div class="text-overlay">李益，唐代诗人，字君虞，祖籍凉州姑臧，后迁河南郑州。进士及第后，仕途失意，弃官漫游燕赵。以边塞诗作名世，擅长绝句，尤其七绝。</div>
+		    </div>
+	    </div>
+    </div>
+	
+</body>
+</html>
